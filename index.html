@@ -4,40 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fuji Enterprise</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-brand: #2D5F8D;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">FUJI</div>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-3xl font-bold text-brand tracking-wider">FUJI</div>
             <nav>
-                <ul>
-                    <li><a href="#home">ホーム</a></li>
-                    <li><a href="#about">会社概要</a></li>
-                    <li><a href="#privacy">プライバシーポリシー</a></li>
-                    <li><a href="#contact">お問い合わせ</a></li>
+                <ul class="flex flex-col md:flex-row gap-8 md:gap-8 text-center">
+                    <li><a href="#home" class="text-sm font-medium text-gray-800 hover:text-brand transition-colors">ホーム</a></li>
+                    <li><a href="#about" class="text-sm font-medium text-gray-800 hover:text-brand transition-colors">会社概要</a></li>
+                    <li><a href="#privacy" class="text-sm font-medium text-gray-800 hover:text-brand transition-colors">プライバシーポリシー</a></li>
+                    <li><a href="#contact" class="text-sm font-medium text-gray-800 hover:text-brand transition-colors">お問い合わせ</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            <section id="about">
-                <h2>会社概要</h2>
-                <table class="info-table">
-                    <tr>
-                        <th>事業者名</th>
-                        <td>富士エンタープライズ</td>
+    <!-- Main Content -->
+    <main class="min-h-screen py-8">
+        <div class="max-w-7xl mx-auto px-5">
+            <!-- About Section -->
+            <section id="about" class="bg-white p-12 mb-8 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b-4 border-brand">会社概要</h2>
+                <table class="w-full border-collapse mt-4">
+                    <tr class="border-b border-gray-200">
+                        <th class="bg-gray-100 p-4 text-left font-semibold text-gray-800 w-40 align-top">事業者名</th>
+                        <td class="p-4 text-gray-600">富士エンタープライズ</td>
                     </tr>
-                    <tr>
-                        <th>所在地</th>
-                        <td>〒107-0061<br>東京都港区北青山1-3-3 三橋ビル 3階</td>
+                    <tr class="border-b border-gray-200">
+                        <th class="bg-gray-100 p-4 text-left font-semibold text-gray-800 w-40 align-top">所在地</th>
+                        <td class="p-4 text-gray-600">〒107-0061<br>東京都港区北青山1-3-3 三橋ビル 3階</td>
                     </tr>
-                    <tr>
-                        <th>事業内容</th>
-                        <td>
-                            <ul>
+                    <tr class="border-b border-gray-200">
+                        <th class="bg-gray-100 p-4 text-left font-semibold text-gray-800 w-40 align-top">事業内容</th>
+                        <td class="p-4 text-gray-600">
+                            <ul class="list-disc pl-6 space-y-2">
                                 <li>システム開発受託事業</li>
                                 <li>アプリケーション開発・運営事業</li>
                                 <li>Webコンテンツ事業</li>
@@ -48,21 +56,24 @@
                 </table>
             </section>
 
-            <section id="privacy">
-                <h2>プライバシーポリシー</h2>
-                <p>ここにプライバシーポリシーの内容が入ります。</p>
+            <!-- Privacy Policy Section -->
+            <section id="privacy" class="bg-white p-12 mb-8 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b-4 border-brand">プライバシーポリシー</h2>
+                <p class="text-base leading-relaxed text-gray-600">ここにプライバシーポリシーの内容が入ります。</p>
             </section>
 
-            <section id="contact">
-                <h2>お問い合わせ</h2>
-                <p>ここにお問い合わせ情報が入ります。</p>
+            <!-- Contact Section -->
+            <section id="contact" class="bg-white p-12 mb-8 rounded-lg shadow-sm">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 pb-2 border-b-4 border-brand">お問い合わせ</h2>
+                <p class="text-base leading-relaxed text-gray-600">ここにお問い合わせ情報が入ります。</p>
             </section>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Fuji Enterprise All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-brand text-white py-8 text-center mt-12">
+        <div class="max-w-7xl mx-auto px-5">
+            <p class="text-sm">&copy; 2025 Fuji Enterprise All rights reserved.</p>
         </div>
     </footer>
 </body>
