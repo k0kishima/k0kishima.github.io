@@ -1,0 +1,16 @@
+# Site settings
+title: Fuji Enterprise
+description: 富士エンタープライズ コーポレートサイト
+baseurl: ""
+url: "https://k0kishima.github.io"
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+# Exclude files from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

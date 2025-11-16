@@ -1,0 +1,35 @@
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-5 py-4">
+        <div class="flex justify-between items-center">
+            <div class="text-3xl font-bold text-brand tracking-wider">FUJI</div>
+
+            <!-- Hamburger Button (Mobile) -->
+            <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:block">
+                <ul class="flex gap-8">
+                    <li><a href="{{ site.baseurl }}/#home" class="text-sm font-medium text-gray-800 hover:text-brand transition-colors">ホーム</a></li>
+                    <li><a href="{{ site.baseurl }}/#about" class="text-sm font-medium text-gray-800 hover:text-brand transition-colors">会社概要</a></li>
+                    <li><a href="{{ site.baseurl }}/#privacy" class="text-sm font-medium text-gray-800 hover:text-brand transition-colors">プライバシーポリシー</a></li>
+                    <li><a href="{{ site.baseurl }}/#contact" class="text-sm font-medium text-gray-800 hover:text-brand transition-colors">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+            <ul class="flex flex-col gap-4">
+                <li><a href="{{ site.baseurl }}/#home" class="block text-sm font-medium text-gray-800 hover:text-brand transition-colors">ホーム</a></li>
+                <li><a href="{{ site.baseurl }}/#about" class="block text-sm font-medium text-gray-800 hover:text-brand transition-colors">会社概要</a></li>
+                <li><a href="{{ site.baseurl }}/#privacy" class="block text-sm font-medium text-gray-800 hover:text-brand transition-colors">プライバシーポリシー</a></li>
+                <li><a href="{{ site.baseurl }}/#contact" class="block text-sm font-medium text-gray-800 hover:text-brand transition-colors">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
