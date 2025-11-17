@@ -132,6 +132,48 @@ git push origin main
 
 数分後、https://k0kishima.github.io でサイトが更新されます。
 
+## カスタムドメインの設定
+
+### 独自ドメイン（www.fuji.llc）の設定方法
+
+#### 1. DNS設定
+
+ドメインレジストラ（Squarespace Domainsなど）で以下のDNSレコードを設定：
+
+| ホスト名 | タイプ | TTL  | データ                |
+|---------|-------|------|--------------------|
+| @       | A     | 3600 | 185.199.108.153    |
+| @       | A     | 3600 | 185.199.109.153    |
+| @       | A     | 3600 | 185.199.110.153    |
+| @       | A     | 3600 | 185.199.111.153    |
+| www     | CNAME | 3600 | k0kishima.github.io |
+
+#### 2. CNAMEファイル
+
+リポジトリのルートに `CNAME` ファイルを作成（既に作成済み）：
+
+```
+www.fuji.llc
+```
+
+#### 3. GitHub Pagesの設定
+
+1. リポジトリの **Settings** → **Pages**
+2. **Custom domain** に `www.fuji.llc` を入力
+3. Save
+4. DNS設定が反映されたら **Enforce HTTPS** をチェック
+
+#### リダイレクト
+
+GitHub Pagesが自動的に以下のリダイレクトを行います：
+- `fuji.llc` → `www.fuji.llc`
+- `http://www.fuji.llc` → `https://www.fuji.llc`
+
+#### DNS反映時間
+
+- 通常: 数分〜数時間
+- 最大: 48時間
+
 ## トラブルシューティング
 
 ### Jekyllのビルドエラー
